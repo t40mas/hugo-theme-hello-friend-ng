@@ -9,7 +9,6 @@ other = "Übersetzungen"
 [postAvailable]
 other = "Auch verfügbar auf"
 
-
 # 404.html
 #
 [archives]
@@ -21,19 +20,49 @@ other = "Home"
 [notFound]
 other = "Oops, Seite nicht gefunden ..."
 
-
 # posts/single.html
 #
 [readingTime]
-one   = "Eine Minute"
+one = "Eine Minute"
 other = "{{ .Count }} Minuten"
 
 [tableOfContents]
 other = "Inhaltsverzeichnis"
 
 [wordCount]
-one   = "Ein Wort"
+one = "Ein Wort"
 other = "{{ .Count }} Wörter"
 
 [lastModified]
 other = "Letzte Aktualisierung"
+
+# Vita
+[certificates]
+other = "Zertifikate"
+
+[education]
+other = "Education"
+
+[experiences]
+other = "Berufserfahrung"
+
+[information]
+other = "Informationen"
+
+[interests]
+other = "Interessen"
+
+[languages]
+other = "Sprachen"
+
+[projects]
+other = "Projekte"
+
+[skills]
+other = "Fertigkeiten"
+
+[technical]
+other = "Technisch"
+
+[professional]
+other = "Professionell"
