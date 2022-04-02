@@ -4,46 +4,51 @@
 
 <head>
     {{ partial "vita/head.html" . }}
+    {{ partial "head.html" . }}
 </head>
 
 <body>
     <div class="main-wrapper">
-        <div class="container px-3 px-lg-5">
-            <article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
-                {{ partial "vita/header.html" . }}
-                <hr>
-                {{ if .Site.Params.vita.summary.enable }}
-                {{ partial "vita/summary.html" . }}
-                {{ end }}
-                <hr>
-                <div class="resume-body">
-                    <div class="row">
-                        <div class="resume-main col-12 col-lg-8 col-xl-9 pr-0 pr-lg-5">
-                            {{ if .Site.Params.vita.experience.enable }}
-                            {{ partial "vita/experience.html" . }}
-                            {{ end }}
+        <div class="container">
+            {{ partial "header.html" . }}
+            <div class="container px-3 px-lg-5">
 
-                            {{ if .Site.Params.vita.projects.enable }}
-                            {{ partial "vita/projects.html" . }}
-                            {{ end }}
+                <article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
+                    {{ partial "vita/header.html" . }}
+                    <hr>
+                    {{ if .Site.Params.vita.summary.enable }}
+                    {{ partial "vita/summary.html" . }}
+                    {{ end }}
+                    <hr>
+                    <div class="resume-body">
+                        <div class="row">
+                            <div class="resume-main col-12 col-lg-8 col-xl-9 pr-0 pr-lg-5">
+                                {{ if .Site.Params.vita.experience.enable }}
+                                {{ partial "vita/experience.html" . }}
+                                {{ end }}
 
-                            {{ if .Site.Params.vita.information.enable }}
-                            {{ partial "vita/information.html" . }}
-                            {{ end }}
+                                {{ if .Site.Params.vita.projects.enable }}
+                                {{ partial "vita/projects.html" . }}
+                                {{ end }}
+
+                                {{ if .Site.Params.vita.information.enable }}
+                                {{ partial "vita/information.html" . }}
+                                {{ end }}
+                            </div>
+                            <!--//resume-main-->
+                            {{ partial "vita/sidebar.html" . }}
                         </div>
-                        <!--//resume-main-->
-                        {{ partial "vita/sidebar.html" . }}
+                        <!--//row-->
                     </div>
-                    <!--//row-->
-                </div>
-                <!--//resume-body-->
-                <hr>
-                {{ if .Site.Params.vita.social.enable }}
-                {{ partial "vita/social.html" . }}
-                {{ end }}
-            </article>
+                    <!--//resume-body-->
+                    <hr>
+                    {{ if .Site.Params.vita.social.enable }}
+                    {{ partial "vita/social.html" . }}
+                    {{ end }}
+                </article>
+            </div>
+            <!--//container-->
         </div>
-        <!--//container-->
         {{ block "footer" . }}
         {{ partial "vita/footer.html" . }}
         {{ end }}
