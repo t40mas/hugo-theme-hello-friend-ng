@@ -55,6 +55,10 @@
   fill: currentColor;
 }
 
+.theme-toggler:hover {
+  fill: $theme-color-primary;
+}
+
 .not-selectable {
   user-select: none;
   -webkit-user-select: none;  

@@ -12,12 +12,7 @@
             <h1>{{ .Site.Title }}</h1>
 
             {{ partial "subtitle.html" . }}
-
-            {{- with .Site.Params.social }}
-                <div>
-                    {{ partial "social-icons.html" . }}
-                </div>
-            {{- end }}
+            {{ partial "subsubtitle.html" . }}
         </div>
     </main>
 {{ end }}

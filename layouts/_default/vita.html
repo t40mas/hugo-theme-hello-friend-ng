@@ -42,15 +42,12 @@
                     </div>
                     <!--//resume-body-->
                     <hr>
-                    {{ if .Site.Params.vita.social.enable }}
-                    {{ partial "vita/social.html" . }}
-                    {{ end }}
                 </article>
             </div>
             <!--//container-->
         </div>
         {{ block "footer" . }}
-        {{ partial "vita/footer.html" . }}
+        {{ partial "footer.html" . }}
         {{ end }}
     </div>
     <!--//main-wrapper-->
