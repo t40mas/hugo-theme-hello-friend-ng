@@ -37,6 +37,9 @@ other = "{{ .Count }} Wörter"
 other = "Letzte Aktualisierung"
 
 # Vita
+[administrator]
+other = "Administration"
+
 [certificates]
 other = "Zertifikate"
 
