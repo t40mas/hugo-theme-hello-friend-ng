@@ -2,7 +2,11 @@
     <ul class="menu__inner">
         {{- $currentPage := . -}}
         {{ range .Site.Menus.main -}}
+            {{if eq .Name "Vita"}}
+            <li title="Login: t40mas Passwort: Mein Geburtsdatum (xx.xx.xxxx)"><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+            {{else}}
             <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+            {{end}}
         {{- end }}
 
         {{- if .Site.Params.EnableGlobalLanguageMenu }}
