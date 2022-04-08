@@ -71,6 +71,7 @@
     display: inline-block;
     margin-right: 15px;
     text-decoration: none;
+    word-break: break-all;
 
     &:hover {
       text-decoration: underline;
