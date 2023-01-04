@@ -7,8 +7,8 @@
  */
 const themeToggle = document.querySelector(".theme-toggle");
 const chosenTheme = window.localStorage && window.localStorage.getItem("theme");
-const chosenThemeIsDark = chosenTheme == "dark";
-const chosenThemeIsLight = chosenTheme == "light";
+const chosenThemeIsDark = chosenTheme === "dark";
+const chosenThemeIsLight = chosenTheme === "light";
 
 // Detect the color scheme the operating system prefers.
 function detectOSColorTheme() {
@@ -21,6 +21,7 @@ function detectOSColorTheme() {
   } else {
     document.documentElement.setAttribute("data-theme", "light");
   }
+  document.getElementsByTagName('head')[0].getElementsByTagName('meta').namedItem("theme-color").setAttribute("content", getComputedStyle(document.body).getPropertyValue("background-color"));
 }
 
 // Switch the theme.
